@@ -1,0 +1,97 @@
+<h1>Tabelas</h1>
+<div id="main">
+    <aside id="TextField">
+        <p class="TextComp">Olá, eu sou o goku Olá, eu sou o goku Olá, eu sou o goku Olá, eu sou o goku Olá, eu sou o goku</p>
+    </aside>
+    <div id="divTable">
+        <table>
+            <caption id="tableCaption"><h2><strong>Produtos</strong></h2></caption>
+            <thead id="tablehead">
+                <tr class="tablerow">
+                    <th class="tableatribute">Produto</th>
+                    <th class="tableatribute">Preço</th>
+                    <th class="tableatribute">Quantidade</th>
+                    <th class="tableatribute">Total</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+                <tr class="tablerow">
+                    <td class="tableatribute">Ipad</td>
+                    <td class="tableatribute">3000</td>
+                    <td class="tableatributeqtd">1</td>
+                    <td class="tableatribute">3000</td>
+                </tr>
+                <tr class="tablerow">
+                    <td class="tableatribute">MotoG5sPlus</td>
+                    <td class="tableatribute">1200</td>
+                    <td class="tableatributeqtd">1</td>
+                    <td class="tableatribute">1200</td>
+                </tr>
+                <tr class="tablerow">
+                    <td class="tableatribute">Mouse Logitech</td>
+                    <td class="tableatribute">150</td>
+                    <td class="tableatributeqtd">1</td>
+                    <td class="tableatribute">150</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tableatribute" colspan="3">Total</td>
+                    <td class="tableatribute">5000</td>
+                </tr>
+
+            </tfoot>
+        </table>
+    </div>
+</div>
+<style>
+    #main {
+        weight: 700px;
+    }
+    #TextField {
+        padding-right: 350px;
+    }
+    .TextComp {
+        text-align: center;
+    }
+    #divTable {
+        padding-left: 350px;
+        padding-top: 100px;
+    }
+    #tableCaption {
+        text-align: left;
+
+    }
+    .tablerow{
+        text-align: left;
+        padding: 15px;
+    }
+    #tablehead{
+        text-align: left;
+        border-bottom: solid 3px #444;
+        padding-bottom: 1px;
+    }
+    #tablebody {
+        text-align: left;
+
+    }
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+    .tableatribute {
+        padding: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .tableatributeqtd {
+        text-align: center;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>

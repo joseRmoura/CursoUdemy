@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Teste</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .header-web {
+            display: flex;
+            height: 90px;
+            justify-content: center;
+            align-items: center;
+            background-color: darkgray;
+        }
+        .section-web {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: slateblue;
+            height: 500px;
+        }
+        #apresentation {
+            display: flex;
+            justify-content: center;
+            background-color: red;
+            position: absolute;
+            top: 90px;
+            width: 100%;
+            height: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-web">
+        <h1>Cabeçalho</h1>
+    </header>
+    <section class="section-web">
+        <h2>Conteudo</h2>
+    </section>
+    <div id="apresentation">
+        <p>BEM VINDO AO NOSSO SITE!</p>
+    </div>
+    <script>
+        $.fn.fundobody = function() {
+            this.css('display', 'none')
+            return this
+        }
+        $('#apresentation').fundobody()
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log((0.85*0.978745).toFixed(2))

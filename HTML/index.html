@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio HTML</title>
+    <style>
+        body {
+            background: #7fffd4;
+        }
+        #header {
+            text-align: center;
+        }
+        #conteudo {
+            padding: 30px 0px;
+        }
+        .conteudo-Text {
+            text-align: center;
+        }
+        #gif {
+             margin-left: 570px;
+        }
+         .redonda {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href wm-nav="exercicios/teste.html">00-teste</a> |
+        <a href wm-nav="exercicios/texto1.html">01-texto2</a> |
+        <a href wm-nav="exercicios/listas01.html">02-Listas</a> |
+        <a href wm-nav="exercicios/listasAninhadas.html">03-Listas</a> |
+        <a href wm-nav="exercicios/links.html">04-Links</a> |
+        <a href wm-nav="exercicios/tabelas.html">05-Tabelas</a> |
+        <a href wm-nav="exercicios/form/form.html">06-Forms</a> |
+        <a href wm-nav="exercicios/imagens.html">07-Imagens</a> |
+        <a href wm-nav="exercicios/videos.html">08-Videos</a> |
+        <a href wm-nav="exercicios/tagsNaovisuais.html">09-Tags nao visuais</a>
+    </nav>
+    <section id="conteudo">
+        <p id="gif">
+            <img class="redonda" src="https://www.estudokids.com.br/wp-content/uploads/2018/09/polo-norte.jpg" alt="Imagem polo norte" width="580" height="580">
+        </p>
+        <p class="conteudo-Text">
+            Teste josé
+        </p>
+    </section>
+    <footer>
+        <br><br> 
+        Curso de Web modernoa
+    </footer>
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e) {
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>
